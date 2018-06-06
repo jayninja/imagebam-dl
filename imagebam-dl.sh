@@ -15,5 +15,4 @@ do
   DIRECT_IMAGE_URL=`curl -s "$i" | grep og:image | cut -f4 -d'"'`
   FILENAME=`basename $DIRECT_IMAGE_URL`
   wget -O ./$DIRECTORY_NAME/$FILENAME $DIRECT_IMAGE_URL 
-#FOLDER=$(echo $1 | cut -d '/' -f 5) ; curl -s "$i" | grep 'img id' | grep -o "http.*" | cut -d '"' -f1 | xargs wget -nv -nc -P imagebam_"$FOLDER"/ ; 
 done
